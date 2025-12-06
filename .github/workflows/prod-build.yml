@@ -1,0 +1,14 @@
+name: Production build
+on: workflow_dispatch
+
+jobs:
+  test:
+    name: Production build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout ✅
+        uses: actions/checkout@v4
+      - name: Can I deploy?
+        uses: schedule-x/canideploy@v1.0
+        with:
+          timezone: 'US/Hawaii'
